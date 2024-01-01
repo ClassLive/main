@@ -4,7 +4,7 @@
 </svelte:head>
 
 <div class="text-column">
-	<h1>GamesShows:</h1>
+	<h1>Gameshows</h1>
 
 	<p>
 		We currently do not have any finished gameshows, check back soon!
