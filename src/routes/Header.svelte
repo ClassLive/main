@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from 'https://classlive.vercel.app/favicon.png';
+	import logo from '../favicon.png';
 	import github from '$lib/images/github.svg';
 </script>
 
