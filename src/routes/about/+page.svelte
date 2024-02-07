@@ -12,6 +12,6 @@
 
 
 	<p>
-		We currently have 1 game! But there will be many more in the future!
+		We currently have one gameshow! But there will be many more in the future!
 	</p>
 </div>
