@@ -2,9 +2,9 @@
   import { fade } from 'svelte/transition';
 
   let gameshow = {
-    title: 'Block Puzzle Challenge',
-    link: '/blockpuzzle',
-    image: 'https://via.placeholder.com/640x360.png?text=Block+Puzzle+Challenge'
+    title: 'Block Puzzle',
+    link: 'https://classlive-docs.vercel.app/blockpuzzle',
+    image: 'https://classlive.vercel.app/block.svg'
   };
 </script>
 
