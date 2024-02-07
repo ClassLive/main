@@ -1,90 +1,50 @@
 <script>
-  import { fade } from 'svelte/transition';
-
-  let gameshow = {
-    title: 'Block Puzzle',
-    link: 'https://classlive-docs.vercel.app/blockpuzzle',
-    image: 'https://classlive.vercel.app/block.svg'
-  };
+  const gameUrl = "https://classlive-docs.vercel.app/blockpuzzle";
 </script>
 
-<svelte:head>
-  <title>Block Puzzle Challenge</title>
-  <meta name="description" content="Block Puzzle Challenge - An exciting game show based on the block puzzle game!" />
-</svelte:head>
-
-<div class="text-column">
-  <h1>Block Puzzle Challenge</h1>
-
-  <p>
-    Welcome to the Block Puzzle Challenge! Compete in this thrilling game show based on the classic block puzzle game.
-  </p>
-</div>
-
-<div class="grid">
-  <a href={gameshow.link} target="_blank" class="cell">
-    <div class="cell-inner" transition:fade>
-      <div id={'bg-' + gameshow.title} class="bg">
-        <img src={gameshow.image} alt="Block Puzzle Challenge Image" />
-      </div>
-      <div class="content">
-        <h2>{gameshow.title}</h2>
-        <p>Compete in a thrilling block puzzle game show!</p>
-      </div>
-    </div>
-  </a>
-</div>
-
 <style>
-  .text-column {
+  main {
     max-width: 800px;
     margin: 0 auto;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 20px;
     padding: 20px;
+    text-align: center;
   }
 
-  .cell {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    text-decoration: none;
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
 
-  .cell-inner {
-    position: relative;
-    z-index: 2;
-    transition: opacity 0.3s;
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
   }
 
-  .cell-inner:hover {
-    opacity: 1;
+  .game-link {
+    margin-top: 50px;
   }
 
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .game-link img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
   }
 
-  .content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
-    z-index: 3;
-  }
-
-  h2 {
-    margin: 0;
+  .game-link img:hover {
+    transform: translateY(-5px);
   }
 </style>
+
+<main>
+  <h1>Welcome to Block Puzzle</h1>
+  <p>Block Puzzle is a fun and addictive puzzle game that challenges your spatial awareness and problem-solving skills. Drag and drop blocks onto the grid to create full lines and clear them from the board. Can you beat your high score?</p>
+  <div class="game-link">
+    <a href={gameUrl} target="_blank" rel="noopener">
+      <img src="https://classlive.vercel.app/block.svg" alt="Block Puzzle" />
+    </a>
+  </div>
+</main>
