@@ -1,39 +1,38 @@
 <script>
   import { fade } from 'svelte/transition';
 
-  let gameshows = [
-    { title: 'Block Puzzle Challenge', link: '/blockpuzzle', image: 'https://classlive.vercel.app/block.svg' },
-    // add more gameshows here
-  ];
+  let gameshow = {
+    title: 'Block Puzzle Challenge',
+    link: '/blockpuzzle',
+    image: 'https://via.placeholder.com/640x360.png?text=Block+Puzzle+Challenge'
+  };
 </script>
 
 <svelte:head>
-  <title>Gameshows</title>
-  <meta name="description" content="Gameshows" />
+  <title>Block Puzzle Challenge</title>
+  <meta name="description" content="Block Puzzle Challenge - An exciting game show based on the block puzzle game!" />
 </svelte:head>
 
 <div class="text-column">
-  <h1>Gameshows</h1>
+  <h1>Block Puzzle Challenge</h1>
 
   <p>
-    Check out our exciting gameshows below!
+    Welcome to the Block Puzzle Challenge! Compete in this thrilling game show based on the classic block puzzle game.
   </p>
 </div>
 
 <div class="grid">
-  {#each gameshows as show}
-    <a href={show.link} class="cell">
-      <div class="cell-inner" transition:fade>
-        <div id={'bg-' + show.title} class="bg">
-          <img src={show.image} alt="Game Image" />
-        </div>
-        <div class="content">
-          <h2>{show.title}</h2>
-          <p>Description: {show.title === 'Block Puzzle Challenge' ? 'Compete in a thrilling block puzzle game show!' : 'Description for other game shows.'}</p>
-        </div>
+  <a href={gameshow.link} target="_blank" class="cell">
+    <div class="cell-inner" transition:fade>
+      <div id={'bg-' + gameshow.title} class="bg">
+        <img src={gameshow.image} alt="Block Puzzle Challenge Image" />
       </div>
-    </a>
-  {/each}
+      <div class="content">
+        <h2>{gameshow.title}</h2>
+        <p>Compete in a thrilling block puzzle game show!</p>
+      </div>
+    </div>
+  </a>
 </div>
 
 <style>
