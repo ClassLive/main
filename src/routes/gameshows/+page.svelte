@@ -37,6 +37,18 @@
   .game-link img:hover {
     transform: translateY(-5px);
   }
+
+  .play-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .play-link:hover {
+    color: #555;
+  }
 </style>
 
 <main>
@@ -46,5 +58,6 @@
     <a href={gameUrl} target="_blank" rel="noopener">
       <img src="https://classlive.vercel.app/block.svg" alt="Block Puzzle" />
     </a>
+    <a class="play-link" href={gameUrl} target="_blank" rel="noopener">Click here to play</a>
   </div>
 </main>
